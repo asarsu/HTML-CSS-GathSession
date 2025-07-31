@@ -14,6 +14,9 @@ html{
     background-repeat: no-repeat;
     background-size: 53%;
     background-position: 702px 132px;
+    @include abstracts.breakpoint(desktop-l){
+        background-position: 963px 170px;
+    }
    
 }
 
@@ -22,6 +25,13 @@ body{
     background-repeat: no-repeat;
     background-position: 635px 70px, 864px 70px, 635px 522px, 864px 300px, 1097px 181px;
     background-size: 15%, 15%, 15%, 15%;
+
+    @include abstracts.breakpoint(desktop-l){
+         background-size: 14%, 14%, 14%, 14%, 14%;
+         background-position: 920px 70px, 1200px 70px, 920px 644px, 1200px 362px, 1484px 181px;
+         position: relative;
+         z-index: -1;
+    }
 }
 
 header{
@@ -30,9 +40,22 @@ header{
     justify-content: start;
     align-items: center;
     margin-bottom: 100px;
+
+    @include abstracts.breakpoint(desktop-l){
+        margin: 2rem 5rem;
+        justify-content: space-between;
+    }
+
     nav.menu ul{
         display: flex;
         gap: 34px;
+
+        @include abstracts.breakpoint(desktop-l){
+            margin-right: 2rem;
+            gap: 56px;
+          
+        }
+
         li a{
             color: abstracts.$gray;
             text-decoration: none;
@@ -51,14 +74,32 @@ header{
     }
 }
 
-main article.hero{
+main{
+    
+    @include abstracts.breakpoint(desktop-l){
+        margin: 5rem 5rem 2rem;
+       
+    }
+
+    article.hero{
     max-width: 46%;
     margin-bottom: 130px;
+
+    @include abstracts.breakpoint(desktop-l){
+        max-width: 48%;
+       
+    }
+
     h1{
         color:  white;
         font-family: "Merriweather", serif;
         font-size:  60px;
         margin-bottom: 24px;
+
+        @include abstracts.breakpoint(desktop-l){
+            font-size: 90px;
+            margin-bottom: 36px;
+        }
     }
 
     p{
@@ -68,6 +109,12 @@ main article.hero{
         color: abstracts.$gray;
         font-size: 18px;
         margin-bottom: 32px;
+
+        @include abstracts.breakpoint(desktop-l){
+            max-width: 86%;
+            font-size: 24px;
+            margin-bottom: 36px;
+        }
     }
 
     div.buttons{
@@ -116,6 +163,7 @@ main article.hero{
         }
     }
 }
+}
 
 section.info{
     
@@ -124,6 +172,10 @@ section.info{
     max-width: 43%;
     gap: 20px;
     padding-bottom: 30px;
+    @include abstracts.breakpoint(desktop-l){
+        justify-content: space-between;
+        margin-top: 8rem;
+    }
 
     
     div{

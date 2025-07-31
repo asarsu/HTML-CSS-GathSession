@@ -2,26 +2,51 @@
 @use 'variables';
 
 @mixin breakpoint($bp) {
-  @if $bp == tablet {
-    @media (min-width: variables.$bp-tablet) {
+  
+  @if $bp == mobile-s {
+    @media (max-width: variables.$bp-mobile-s) {
+      @content;
+    }
+  }
+  
+  @else if $bp == mobile-m {
+    @media (max-width: variables.$bp-mobile-m) {
+      @content;
+    }
+  }
+
+  @else if $bp == mobile-l {
+    @media (max-width: variables.$bp-mobile-l) {
+      @content;
+    }
+  }
+  
+  @else if $bp == tablet {
+    @media (max-width: variables.$bp-tablet) {
       @content;
     }
   }
 
   @else if $bp == tablet-horizontal {
-    @media (min-width: variables.$bp-tablet-horizontal) {
+    @media (max-width: variables.$bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+ @else if $bp == laptop {
+    @media (max-width: variables.$bp-laptop) {
       @content;
     }
   }
 
   @else if $bp == desktop {
-    @media (min-width: variables.$bp-desktop) {
+    @media (max-width: variables.$bp-desktop) {
       @content;
     }
   }
 
-  @else if $bp == desktop-xl {
-    @media (min-width: variables.$bp-desktop-xl) {
+  @else if $bp == desktop-l {
+    @media (max-width: variables.$bp-desktop-l) {
       @content;
     }
   }

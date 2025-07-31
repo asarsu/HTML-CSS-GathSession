@@ -2,10 +2,14 @@
 
 // sass/abstracts/_variables.scss
 
+$bp-mobile-s: 320px;
+$bp-mobile-m: 375px;
+$bp-mobile-l: 425px;
 $bp-tablet: 768px;
-$bp-tablet-horizontal: 992px;
-$bp-desktop: 1200px;
-$bp-desktop-xl: 1400px;
+$bp-tablet-horizontal: 1024px;
+$bp-laptop: 1336px;
+$bp-desktop: 1440px;
+$bp-desktop-l: 1920px;
 
 //colors
 $pink: #DB2A6B;
