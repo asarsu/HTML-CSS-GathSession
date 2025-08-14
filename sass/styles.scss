@@ -32,6 +32,15 @@ body{
          position: relative;
          z-index: -1;
     }
+
+     @include abstracts.breakpoint(desktop){
+         background-size: 14%, 14%, 14%, 14%, 14%;
+        background-position: 646px 70px, 864px 70px, 646px 494px, 864px 288px, 1088px 181px;
+         position: relative;
+         z-index: -1;
+    }
+
+
 }
 
 header{
@@ -46,14 +55,23 @@ header{
         justify-content: space-between;
     }
 
+    @include abstracts.breakpoint(desktop){
+       gap: 450px;
+       margin: 2rem 3rem;
+    }
+
     nav.menu ul{
         display: flex;
         gap: 34px;
 
         @include abstracts.breakpoint(desktop-l){
             margin-right: 2rem;
-            gap: 56px;
-          
+            gap: 56px;          
+        }
+
+         @include abstracts.breakpoint(desktop){
+            margin-right: 0rem;
+            gap: 44px;          
         }
 
         li a{
@@ -61,6 +79,13 @@ header{
             text-decoration: none;
             font-family: "Poppins", sans-serif;
             padding: 5px;
+            
+            @include abstracts.breakpoint(desktop){
+                font-size: 15px;          
+            }
+
+            
+            
             &:hover{
                 color: white; 
                 padding: 5px;
@@ -77,8 +102,11 @@ header{
 main{
     
     @include abstracts.breakpoint(desktop-l){
-        margin: 5rem 5rem 2rem;
-       
+        margin: 5rem 5rem 2rem;       
+    }
+
+    @include abstracts.breakpoint(desktop){
+        margin: 4rem 2rem 2rem;       
     }
 
     article.hero{
@@ -86,8 +114,13 @@ main{
     margin-bottom: 130px;
 
     @include abstracts.breakpoint(desktop-l){
-        max-width: 48%;
-       
+        max-width: 48%;       
+    }
+
+    @include abstracts.breakpoint(desktop){
+        max-width: 47%;
+        margin-bottom: 7rem;
+
     }
 
     h1{
@@ -99,6 +132,10 @@ main{
         @include abstracts.breakpoint(desktop-l){
             font-size: 90px;
             margin-bottom: 36px;
+        }
+
+        @include abstracts.breakpoint(desktop){
+            font-size: 64px ;
         }
     }
 
@@ -114,6 +151,13 @@ main{
             max-width: 86%;
             font-size: 24px;
             margin-bottom: 36px;
+        }
+
+        @include abstracts.breakpoint(desktop){
+            
+            font-size: 19px;
+            max-width: 92%;;
+           
         }
     }
 
@@ -177,6 +221,10 @@ section.info{
         margin-top: 8rem;
     }
 
+     @include abstracts.breakpoint(desktop){        
+        margin-top: 0;
+    }
+
     
     div{
         display: flex;
@@ -195,8 +243,11 @@ section.info{
         &:hover{
             text-decoration-line: underline;
             text-decoration-thickness: 3px;
-            text-decoration-color: abstracts.$pink;
-            
+            text-decoration-color: abstracts.$pink;            
+        }
+
+        @include abstracts.breakpoint(desktop){
+            font-size: 16px;
         }
     }
     
